@@ -6,7 +6,6 @@ budget_data = os.path.join('Documents', "pybank_budget_data.csv")
 with open(budget_data, newline = "") as csvfile:
     csvreader = csv.reader(csvfile, delimiter =",")
     csv_header = next(csvfile)
-    print(f"Header: {csv_header}")
 
     P = []
     months = []
@@ -26,13 +25,13 @@ with open(budget_data, newline = "") as csvfile:
         greatest_increase = max(revenue_change)
         greatest_decrease = min(revenue_change)
 
-        print("Financial Analysis" + "\n")
-        print("--------------------------------------------------"+ "\n")
+print("Financial Analysis" + "\n")
+print("--------------------------------------------------"+ "\n")
 
 print("total months: " + str(total_months))
-print("Total:" + "$" + str(sum(P)))
-print("Average Change:" + "$" + str(revenue_average))
-print("Greatest Increase in Profits:" + str(months[revenue_change.index(max(revenue_change))+1]) + " " +"$" + str(greatest_increase))   
+print("Total: " + "$" + str(sum(P)))
+print("Average Change: " + "$" + str(revenue_average))
+print("Greatest Increase in Profits: " + str(months[revenue_change.index(max(revenue_change))+1]) + " " +"$" + str(greatest_increase))   
 print("Greatest Decrease in Profits: " + str(months[revenue_change.index(min(revenue_change))+1]) + " " + "$" + str(greatest_decrease))
 
 # output to a text file
@@ -55,14 +54,6 @@ file.write("Greatest Decrease in Profits: " + str(months[revenue_change.index(mi
 
 file.close()
 
-
-
-
-
     
-
-
-
-
 
 
